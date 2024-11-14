@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:postgresql://127.0.0.1:5432/flyweight";
-    private static final String USER = "develop";
-    private static final String PASSWORD = "1234";
+    private static final String URL = System.getenv("DATABASE_URL");
+    private static final String USER = System.getenv("DATABASE_USER");
+    private static final String PASSWORD = System.getenv("DATABASE_PASS");
     private static Connection connection;
 
     // Método para obtener la conexión a la base de datos
